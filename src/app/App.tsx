@@ -1,7 +1,15 @@
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router";
+
+import { store } from "@/store";
+import { AppRoutes } from "./Routes";
+
 export const App = () => {
 	return (
-		<div>
-			<p>page</p>
-		</div>
+		<Provider store={store}>
+			<BrowserRouter>
+				<AppRoutes />
+			</BrowserRouter>
+		</Provider>
 	);
 };
