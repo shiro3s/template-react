@@ -1,25 +1,24 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-type Todo = {
+type Memo = {
   id: string;
   title: string;
   content?: string;
-  done: boolean;
 }
 
 type State = {
-  todos: Todo[] 
+  memos: Memo[] 
 }
 
 const initialState: State = {
-  todos: []
+  memos: []
 }
 
-export const todoStore = createSlice({
-  name: "todo",
+export const memoStore = createSlice({
+  name: "memo",
   initialState,
   reducers: {},
   extraReducers: (builder) => {}
 })
 
-export default todoStore.reducer
+export default memoStore.reducer

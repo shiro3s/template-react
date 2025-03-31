@@ -1,11 +1,11 @@
 import { styled } from "@kuma-ui/core";
 import { Header } from "./Header";
 
-export const TodoLists = () => {
+export const MemoLists = () => {
 	return (
 		<section>
 			<Header />
-			<Content>todo lists</Content>
+			<Content>memo lists</Content>
 		</section>
 	);
 };

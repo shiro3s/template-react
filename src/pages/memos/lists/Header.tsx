@@ -1,10 +1,10 @@
 import { styled } from "@kuma-ui/core";
-import {AnchorBtn} from "@/components/anchor-btn"
+import {AnchorBtn} from "@/components/common/anchor-btn"
 
 export const Header = () => {
 	return (
     <Container>
-      <AnchorBtn href="/todos/new">New todo</AnchorBtn>
+      <AnchorBtn href="/new">New</AnchorBtn>
     </Container>
   )
 };

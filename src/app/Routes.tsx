@@ -1,17 +1,18 @@
 import { Routes, Route } from "react-router";
-import { TodoLists } from "@/pages/todos/lists";
+
+import { MemoLists } from "@/pages/memos/lists";
+import { CreateMemo } from "@/pages/memos/new";
+import { EditMemo } from "@/pages/memos/edit";
+import { DetailMemo } from "@/pages/memos/detail";
 import { NotFound } from "@/pages/not-found";
-import { CreateTodo } from "@/pages/todos/new";
-import { EditTodo } from "@/pages/todos/edit";
-import { DetailTodo } from "@/pages/todos/detail";
 
 export const AppRoutes = () => {
 	return (
 		<Routes>
-			<Route path="/" Component={TodoLists} />
-			<Route path="/new" Component={CreateTodo} />
-			<Route path="/edit/:id" Component={EditTodo} />
-			<Route path="/:id" Component={DetailTodo} />
+			<Route path="/" Component={MemoLists} />
+			<Route path="/new" Component={CreateMemo} />
+			<Route path="/edit/:id" Component={EditMemo} />
+			<Route path="/:id" Component={DetailMemo} />
 			<Route path="*" Component={NotFound} />
 		</Routes>
 	);

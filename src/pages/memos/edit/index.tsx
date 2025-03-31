@@ -1,3 +1,3 @@
-export const EditTodo = () => {
+export const EditMemo = () => {
 	return <div>edit todo</div>;
 };
