@@ -50,4 +50,5 @@ const Input = styled.textarea`
   resize: none;
   field-sizing: content;
   padding: 0;
+	color: #606266;
 `;

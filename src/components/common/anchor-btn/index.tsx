@@ -1,4 +1,5 @@
 import { styled } from "@kuma-ui/core";
+import { Link } from "react-router";
 
 type Props = {
 	href: string;
@@ -7,27 +8,36 @@ type Props = {
 };
 
 export const AnchorBtn: React.FC<Props> = ({ children, href, disabled }) => {
-	return <Container href={href} aria-disabled={disabled}>{children}</Container>;
+	return (
+		<Container>
+			<Link to={href} aria-disabled={disabled}>
+				{children}
+			</Link>
+		</Container>
+	);
 };
 
-const Container = styled.a`
+const Container = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
-  height: 32px;
-  padding: 8px 15px;
-  box-sizing: border-box;
-  border: 1px solid #dcdcdc;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  background-color: #fff;
-  white-space: nowrap;
-  color: #606266;
-  cursor: pointer;
 
-  &[aria-disabled="true"] {
+  a {
+    line-height: 1;
+    height: 32px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #fff;
+    white-space: nowrap;
+    color: #606266;
+    cursor: pointer;
+  }
+
+  a[aria-disabled="true"] {
     cursor: not-allowed;
     pointer-events: none;
   }

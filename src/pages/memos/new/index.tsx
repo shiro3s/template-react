@@ -1,16 +1,14 @@
-import {styled} from "@kuma-ui/core"
-import { InputText } from "@/components/common/input-text";
-import {useTodoForm} from "./useTodoForm"
-
-import {MemoForm} from "@/components/feature/memo-form"
+import { MemoForm } from "@/components/feature/memo-form";
+import { useNewPage } from "./useNewPage";
 
 export const CreateMemo = () => {
-	const {register} = useTodoForm()
+	const { handleSubmit } = useNewPage();
 
 	return (
-		<MemoForm title="Create a new memo" />
+		<MemoForm
+			title="Create a new memo"
+			submitText="Create memo"
+			submit={handleSubmit}
+		/>
 	);
 };
-
-const Form = styled.form`
-`;

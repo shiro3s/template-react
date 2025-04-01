@@ -1,6 +1,6 @@
+import { styled } from "@kuma-ui/core";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router";
-import { styled } from "@kuma-ui/core";
 
 import { store } from "@/store";
 import { AppRoutes } from "./Routes";

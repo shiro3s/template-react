@@ -1,15 +1,11 @@
-import { styled } from "@kuma-ui/core";
+import { Contents } from "./Contents";
 import { Header } from "./Header";
 
 export const MemoLists = () => {
 	return (
 		<section>
 			<Header />
-			<Content>memo lists</Content>
+			<Contents />
 		</section>
 	);
 };
-
-const Content = styled.div`
-  margin: 2rem 0;
-`;
