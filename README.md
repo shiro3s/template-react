@@ -6,4 +6,5 @@
 - TypeScript
 - Redux / Redux Toolkit
 - react-hook-form
+- Kuma UI
 - Biome
