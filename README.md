@@ -1,5 +1,7 @@
 # Template React 
 
+Simple CRUD Sample with React and Redux
+
 ## Libraries
 
 - React
