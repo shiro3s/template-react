@@ -8,5 +8,5 @@ Simple CRUD Sample with React and Redux
 - TypeScript
 - Redux / Redux Toolkit
 - react-hook-form
-- Kuma UI
+- CSS Module
 - Biome
