@@ -1,5 +1,5 @@
-import { Contents } from "./Contents";
-import { Header } from "./Header";
+import { Contents } from "./contents";
+import { Header } from "./header";
 
 export const MemoLists = () => {
 	return (

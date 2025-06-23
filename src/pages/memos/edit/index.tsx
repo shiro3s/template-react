@@ -1,16 +1,16 @@
-import { styled } from "@kuma-ui/core";
-
 import { MemoForm } from "@/components/feature/memo-form";
 import { useEditPage } from "./useEditPage";
+
+import styles from "./style.module.css"
 
 export const EditMemo = () => {
 	const { memo, handleSubmit, handleDelete } = useEditPage();
 
 	if (!memo) {
 		return (
-			<Empty>
-				<EmptyText>Not Found</EmptyText>
-			</Empty>
+			<div className={styles.empty}>
+				<h2 className={styles.text}>Not Found</h2>
+			</div>
 		);
 	}
 
@@ -24,13 +24,3 @@ export const EditMemo = () => {
 		/>
 	);
 };
-
-const Empty = styled.div`
-	margin-top: 10rem
-`;
-
-const EmptyText = styled.h2`
-	font-size: 24px;
-	margin: 0;
-	color: #606266;
-`;

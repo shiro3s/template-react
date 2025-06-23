@@ -1,0 +1,23 @@
+.container {
+  display: inline-flex;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  padding: 8px 11px;
+  cursor: text;
+}
+
+.container:hover {
+  border-color: #c0c4cc;
+}
+
+.input {
+  width: 100%;
+  min-height: 20vh;
+  outline: none;
+  border: none;
+  resize: none;
+  field-sizing: content;
+  padding: 0;
+	color: #606266;
+}

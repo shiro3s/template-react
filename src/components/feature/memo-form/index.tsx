@@ -1,9 +1,10 @@
 import { InputText } from "@/components/common/input-text";
 import { Textarea } from "@/components/common/textarea";
-import { styled } from "@kuma-ui/core";
 
 import { Btn } from "@/components/common/btn";
 import { type FormState, useMemoForm } from "./useMemoForm";
+
+import styles from "./style.module.css"
 
 type Props = {
 	title: string;
@@ -24,20 +25,20 @@ export const MemoForm: React.FC<Props> = ({
 		useMemoForm(defaultValues);
 
 	return (
-		<Container onSubmit={handleSubmit(submit)}>
-			<Title>{title}</Title>
+		<form onSubmit={handleSubmit(submit)} className={styles.container}>
+			<div className={styles.title}>{title}</div>
 
-			<Field>
+			<div className={styles.field}>
 				<InputText placeholder="Title" register={register("title")} />
-				{!!errors.title && <ErrorMsg>{errors.title.message}</ErrorMsg>}
-			</Field>
+				{!!errors.title && <div className={styles.error}>{errors.title.message}</div>}
+			</div>
 
-			<Field>
+			<div className={styles.field}>
 				<Textarea placeholder="Content" register={register("content")} />
-			</Field>
+			</div>
 
-			<Action>
-				<BtnGroup>
+			<div className={styles.action}>
+				<div className={styles.btnGroup}>
 					{!!remove && (
 						<Btn
 							type="button"
@@ -51,40 +52,8 @@ export const MemoForm: React.FC<Props> = ({
 					<Btn type="submit" disabled={isSubmitting}>
 						{submitText}
 					</Btn>
-				</BtnGroup>
-			</Action>
-		</Container>
+				</div>
+			</div>
+		</form>
 	);
 };
-
-const Container = styled.form`
-  max-width: 812px;
-  margin: 10vh auto 0;
-`;
-
-const Title = styled.div`
-  font-size: 24px;
-  margin: 0 0 1.5rem;
-	color: #606266;
-`;
-
-const Field = styled.div`
-  margin-bottom: 20px;
-`;
-
-const Action = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const BtnGroup = styled.div`
-	display: flex;
-	align-items: center;
-	gap: 16px;
-`;
-
-const ErrorMsg = styled.div`
-  font-size: 12px;
-  margin-top: 4px;
-  color: #e5534b;
-`;

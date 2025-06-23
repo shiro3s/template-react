@@ -1,5 +1,6 @@
-import { styled } from "@kuma-ui/core";
 import type { UseFormRegisterReturn } from "react-hook-form";
+
+import styles from "./style.module.css"
 
 type Props = Partial<HTMLTextAreaElement> & {
 	register?: UseFormRegisterReturn;
@@ -15,8 +16,9 @@ export const Textarea: React.FC<Props> = ({
 	register,
 }) => {
 	return (
-		<Container>
-			<Input
+		<div className={styles.container}>
+			<textarea
+				className={styles.input}
 				disabled={disabled}
 				readOnly={readOnly}
 				maxLength={maxLength}
@@ -25,30 +27,6 @@ export const Textarea: React.FC<Props> = ({
 				autoComplete={autocomplete || "off"}
 				{...register}
 			/>
-		</Container>
+		</div>
 	);
 };
-
-const Container = styled.div`
-  display: inline-flex;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #dcdcdc;
-  padding: 8px 11px;
-  cursor: text;
-
-  &:hover {
-    border-color: #c0c4cc;
-  }
-`;
-
-const Input = styled.textarea`
-  width: 100%;
-  min-height: 20vh;
-  outline: none;
-  border: none;
-  resize: none;
-  field-sizing: content;
-  padding: 0;
-	color: #606266;
-`;

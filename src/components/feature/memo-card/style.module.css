@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container:hover {
+  border-color: #ccc;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.anchor {
+  position: absolute;
+  inset: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  color: #606266;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.body {
+  min-height: 50px;
+  color: #303133;
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

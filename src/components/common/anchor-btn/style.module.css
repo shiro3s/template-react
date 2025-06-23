@@ -1,0 +1,25 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  line-height: 1;
+  height: 32px;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #fff;
+  white-space: nowrap;
+  color: #606266;
+  cursor: pointer;
+}
+
+.link[aria-disabled="true"] {
+  cursor: not-allowed;
+  pointer-events: none;
+}

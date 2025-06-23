@@ -1,25 +1,19 @@
-import { styled } from "@kuma-ui/core";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router";
 
 import { store } from "@/store";
 import { AppRoutes } from "./Routes";
 
+import styles from "./style.module.css"
+
 export const App = () => {
 	return (
 		<Provider store={store}>
 			<BrowserRouter>
-				<Layout>
+				<div className={styles.layout}>
 					<AppRoutes />
-				</Layout>
+				</div>
 			</BrowserRouter>
 		</Provider>
 	);
 };
-
-const Layout = styled.div`
-	margin: 0 auto;
-	max-width: 1280px;
-	box-sizing: border-box;
-	padding: 2rem 1.5rem;
-`;

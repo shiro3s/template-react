@@ -1,0 +1,31 @@
+.container {
+  max-width: 812px;
+  margin: 10vh auto 0;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0 0 1.5rem;
+	color: #606266;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnGroup {
+  display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.error {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #e5534b;
+}
